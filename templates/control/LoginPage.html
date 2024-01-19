@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>Bog'ot IM - Login</title>
+
+    <!-- Link to css -->
+    <link rel="stylesheet" href="{% static './css/login.css' %}" />
+    <link rel="stylesheet" href="{% static './css/shared.css' %}" />
+  </head>
+  <body>
+    <!-- Login section -->
+    <div class="login">
+      <div class="form-container">
+        <form action="" class="login-form" method='POST'>
+          {% csrf_token %}
+          <div class="login-inputs">
+            <label for="username">Username</label>
+            <input type="username" name="username" id="username" required />
+          </div>
+          <div class="login-inputs">
+            <label for="password">Parol</label>
+            <input type="password" name="password" id="password" required />
+          </div>
+          <button type="submit">Tizimga kirish</button>
+          <p class="description" style="text-align:center;">
+            <a href="{% url "HomePage" %}">Bosh sahifaga qaytish</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <!-- /Login section -->
+  </body>
+</html>

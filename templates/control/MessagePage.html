@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}
+    {{ message.name }}
+{% endblock title %}
+
+{% block content %}
+<div class="container" style='margin-top:100px'>
+  <section class="message-section" id="message-section">
+
+    <h1 class="title">Kimdan: {{ message.name }}</h1>
+    <div class="hr"></div>
+
+    <p class="description">Bog'lanish: {{ message.phone }}</p>
+    <div class="hr"></div>
+
+    <p class="description">
+      Murojaat matni: {{ message.body }}
+    </p>
+    <div class="hr"></div>
+
+    <p class="description">{{ message.date|date:"d/m/Y G:i" }}</p>
+    <div class="hr"></div>
+
+      <a class='button' href="{% url 'MessagesPage' %}">Chiqish</a>
+      <form method='post'>
+        {% csrf_token %}
+        <button type='submit' class='button'>O'chirish</button>
+      </form>
+  </section>
+</div>
+{% endblock content %}

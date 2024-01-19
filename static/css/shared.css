@@ -1,0 +1,194 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Average+Sans&display=swap");
+
+/* Custom scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Set the color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Set the color of the scrollbar thumb */
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+/* Core styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg, #ecea0f, #3f01e6);
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 5px;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 3px;
+  word-spacing: 10px;
+  font-weight: 400;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.description {
+  font-size: 1.2rem;
+  font-family: "Average Sans", sans-serif;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.hr {
+  margin: 20px 0px;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+}
+
+::selection {
+  background-color: #ffcc00; /* Matn bo'yalganida fona rang qo'yish */
+  color: #333; /* Matn rangi */
+}
+
+img {
+  user-select: none;
+}
+
+/* Styles for header section */
+.header {
+  padding: 5px 0px;
+  width: 100%;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: 0.3s all ease 0s;
+  background: linear-gradient(315deg, #ecea0f, #3f01e6);
+  z-index: 999;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.header .main-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo img {
+  border-radius: 50%;
+}
+
+.header-items {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.header-item {
+  margin-left: 10px;
+}
+
+.header-item a {
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: 0.3s all ease 0s;
+}
+
+.header-item a:hover {
+  background-color: #fff;
+  color: #3f01e6;
+  font-size: 1.2rem;
+}
+
+/* Styles for responsive header */
+.responsive-navbar {
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 0px;
+  justify-content: center;
+}
+
+.responsive-navbar li {
+  margin-top: 30px;
+}
+
+/* Styles for header section */
+.footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.footer-items {
+  margin-top: 10px;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-item {
+  margin-left: 20px;
+}
+
+.footer-item img {
+  transition: 0.3s all ease 0s;
+}
+
+.footer-item img:hover {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.footer-item img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-copyright {
+  margin-top: 10px;
+}
+
+.footer-copyright a {
+  color: #fff;
+}

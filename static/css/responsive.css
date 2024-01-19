@@ -1,0 +1,49 @@
+/* Core styles */
+.responsive-bar {
+  display: none;
+}
+
+/* Special medias */
+@media only screen and (max-width: 1243px) {
+  /* Styles for hero section */
+  .about-secondary-data {
+    display: none;
+  }
+
+  .about-main-information {
+    text-align: center;
+  }
+}
+
+/* Media for tablet */
+@media only screen and (max-width: 962px) {
+  /* Styles for navbar */
+  .responsive-bar {
+    display: block;
+  }
+
+  .default-header {
+    display: none !important;
+  }
+
+  /* Styles for hero section */
+  .main .secondary-image {
+    display: none;
+  }
+
+  .main .main-information {
+    text-align: center;
+  }
+
+  /* Styles for news section */
+  .news-card {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  /* Styles for news section */
+  .news-card {
+    width: 100%;
+  }
+}

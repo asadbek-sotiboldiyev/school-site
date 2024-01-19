@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Yangiliklar
+{% endblock title %}
+
+{% block content %}
+
+<div class="container">
+  <section class="news main-news" id="news">
+    <div class="news-header">
+      <h1 class="title">Yangiliklar</h1>
+      <p class="description">
+        Siz vebsaytning bu qismi orqali Bog'ot IM dagi barcha yangiliklardan
+        xabardor bo'lishingiz mumkin.
+      </p>
+    </div>
+    {% if user.is_superuser %}
+      <center>
+        <a class="button" href="{% url 'ArticleAdd' %}" >Maqola qo'shish +</a>
+      </center>
+    {% endif %}
+    <div class="news-cards">
+      {% for article in articles %}
+        <div class="news-card">
+          <div class="news-card-image">
+            <div class="news-card-image">
+              <img src="{{ article.image.url }}" alt="" />
+            </div>
+            <div class="news-card-body">
+              <h3 class="news-card-title title">{{ article.title }}</h3>
+              <p class="news-card-description description">
+                {{ article.description }}
+              </p>
+              <div class="news-card-body-link">
+                <a href="{% url 'ArticlePage' article.id %}"> Ko'proq o'qish </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      
+    </div>
+  </section>
+</div>
+
+<script>
+  const responsiveBarOpen = document.querySelector(".responsive-bar-open");
+  const responsiveNavbar = document.querySelector(".responsive-navbar");
+  const responsiveBarExit = document.querySelector(".responsive-bar-close");
+
+  // Responsive navbar
+  responsiveBarOpen.addEventListener("click", () => {
+    responsiveBarOpen.classList.add("hidden");
+    responsiveBarExit.classList.remove("hidden");
+    responsiveNavbar.classList.remove("hidden");
+  });
+
+  responsiveBarExit.addEventListener("click", () => {
+    responsiveBarOpen.classList.remove("hidden");
+    responsiveBarExit.classList.add("hidden");
+    responsiveNavbar.classList.add("hidden");
+  });
+</script>
+{% endblock content %}

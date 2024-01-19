@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}
+    Bo'glanish
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <section class="contact-section">
+    <h1 class="section-title text-center mb-4">Bog'lanish</h1>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <div class="form-floating mb-3">
+        <input
+          required
+          name='phone'
+          type="text"
+          class="form-control"
+          id="floatingInput"
+          placeholder="name@example.com"
+        />
+        <label htmlFor="floatingInput">Email yoki telefon raqam</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          required
+          name='name'
+          type="text"
+          class="form-control"
+          id="floatingInput"
+          placeholder="name@example.com"
+        />
+        <label htmlFor="floatingInput">Ismingizni </label>
+      </div>
+      <div class="form-floating mb-4">
+        <textarea
+          required
+          name='body'
+          class="form-control"
+          placeholder="Leave a comment here"
+          id="floatingTextarea"
+        ></textarea>
+        <label htmlFor="floatingTextarea">Xabaringizni kiriting</label>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-success" style="width: 100%;font-size: 22px;">Yuborish</button>
+      </div>
+    </form>
+  </section>
+  </div>
+{% endblock content %}

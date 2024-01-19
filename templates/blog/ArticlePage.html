@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}
+	{{ article.title }}
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <section class="all-about-news">
+    <div class="all-about-news-image">
+      <img src="{{ article.image.url }}" alt="" />
+    </div>
+    <hr>
+    <div class="all-about-news-main">
+      <h1 class="title">{{ article.title }}</h1>
+      <hr>
+      <p class="description">
+        {{ article.body|safe }}
+        <br>
+        <br>
+        ({{ article.date|date:"d/m/Y G:i" }})
+      </p>
+    </div>
+    <br>
+    <hr>
+    {% if user.is_superuser %}
+      <a href="{% url 'ArticleEditPage' article.id %}" class="button">Tahrirlash</a>
+      <a href="{% url 'ArticleDeletePage' article.id %}" class="button">O'chirish</a>
+    {% endif %}
+  </section>
+</div>
+    <!-- /More about news -->
+{% endblock content %}

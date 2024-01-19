@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}
+    Kelgan xabarlar
+{% endblock title %}
+
+{% block content %}
+
+  <div class="container">
+    <section class="messages-list" id="messages-list">
+      <a class='button' href="/admin" style='margin-bottom:15px'>Admin</a>
+      <table>
+        <tr>
+          <th>Kimdan</th>
+          <th>Qachon</th>
+          <th>Holati</th>
+        </tr>
+        {% for message in messages %}
+          <tr>
+            <td><a href="{% url 'MessagePage' message.id %}">{{ message.name }}</a></td>
+            <td>{{ message.date|date:"d/m/Y G:i" }}</td>
+            {% if message.read %}
+              <td>✅</td>
+            {% else %}
+              <td>❌</td>
+            {% endif %}
+          </tr>
+        {% endfor %}
+      </table>
+    </section>
+  </div>
+
+{% endblock content %}

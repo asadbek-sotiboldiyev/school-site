@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}
+    Qo'shish
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+  <section class="contact add-article" id="contact">
+    <div class="form-container">
+      <form class="contact-form" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="contact-inputs">
+          <label for="title">Sarlavha</label>
+          <input type="text" name="title" id="title" required />
+        </div>
+        <div class="contact-inputs">
+          <label for="description">Qisqacha</label>
+          <input type="text" name="description" id="description" value='{{ article.description }}' required />
+        </div>
+        <div class="contact-inputs">
+          <label for="body">Yangilik matnini kiriting</label>
+          <textarea name="body" id="body" required></textarea>
+        </div>
+        <div class="contact-input">
+          <input type="file" id="actual-btn" name="image" hidden accept=".jpg, .jpeg, .png" />
+
+          <label for="actual-btn" class="custom-upload"
+            >Rasmni tanlang</label
+          >
+          <span
+            id="file-chosen"
+            style="
+              color: #fff;
+              font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                'Trebuchet MS', sans-serif;
+              font-size: 18px;
+              letter-spacing: 2px;
+            "
+            >Rasm tanlanmagan</span
+          >
+        </div>
+        <button
+          type="submit"
+          style="margin-top: 30px; font-size: 16px; letter-spacing: 2px"
+        >
+          Joylash
+        </button>
+      </form>
+    </div>
+  </section>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,70 @@
+/* Styles for add article */
+.add-article {
+    margin-top: 70px;
+  }
+  
+  .custom-upload {
+    background-color: indigo;
+    color: white;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  #file-chosen {
+    margin-left: 0.3rem;
+    font-family: sans-serif;
+  }
+  
+  /* Styles for message list */
+  .messages-list {
+    margin-top: 100px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table a,
+  .link {
+    color: #fff;
+  }
+  
+  td,
+  th {
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    font-size: 25px;
+  }
+  
+  /* Styles for message section */
+  .message-section {
+    margin-top: 100px;
+  }
+
+  .button {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    transition: 0.3s all ease 0s;
+    font-size: 25px;
+    display: inline-block;
+    margin-top: 10px ;
+    text-decoration: none;
+    margin-right: 10px ;
+  }
+  
+  .button:hover {
+    background-color: #fff;
+    color: #4a00e0;
+    cursor: pointer;
+  }
